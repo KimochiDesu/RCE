@@ -6,22 +6,66 @@
 -->
 <html>
 	<head>
-		<title>Elements - Hyperspace by HTML5 UP</title>
+		<title>Contact & Information - R.C. Electric Laboratory</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" type="image/png" href="RCEicon.png" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.logo {
+				height: 65px;
+				width: auto;
+				margin-right: 15px;
+				vertical-align: middle;
+			}
+			
+			.header-brand {
+				display: flex;
+				align-items: center;
+				text-decoration: none;
+				color: inherit;
+				font-weight: 600;
+			}
+			
+			.electrical-icon {
+				background: linear-gradient(135deg, #f39c12, #e74c3c);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+			}
+
+			.emergency-highlight {
+				background: linear-gradient(135deg, #e74c3c, #c0392b);
+				padding: 2rem;
+				border-radius: 15px;
+				margin: 2rem 0;
+				text-align: center;
+				color: white;
+			}
+
+			.contact-card {
+				background: rgba(255,255,255,0.05);
+				padding: 2rem;
+				border-radius: 15px;
+				margin: 1rem 0;
+				border-left: 4px solid #f39c12;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="title">Hyperspace</a>
-				<nav>
-					<ul>
+			<header id="header" style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(0,0,0,0.9); padding: 1rem 2rem;">
+				<a href="index.html" class="header-brand">
+					<img src="RCELogo.png" alt="R.C. Electric Laboratory Logo" class="logo" />
+					<span class="title">R.C. Electric Laboratory</span>
+				</a>
+				<nav style="margin-left: auto;">
+					<ul style="display: flex; gap: 2rem; margin: 0; padding: 0; list-style: none;">
 						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html">Generic</a></li>
-						<li><a href="elements.html"  class="active">Elements</a></li>
+						<li><a href="generic.html">Services</a></li>
+						<li><a href="elements.html" class="active">Contact</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -30,311 +74,254 @@
 			<div id="wrapper">
 
 				<!-- Main -->
-					<section id="main" class="wrapper">
+					<section id="main" class="wrapper" style="margin-top: 100px;">
 						<div class="inner">
-							<h1 class="major">Elements</h1>
+							<h1 class="major">Contact & Information</h1>
 
-							<!-- Text -->
-								<section>
-									<h2>Text</h2>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<hr />
-									<h3>Blockquote</h3>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h3>Preformatted</h3>
-									<pre><code>i = 0;
+							<div class="emergency-highlight">
+								<h2><span class="electrical-icon">🚨</span> Emergency Services Available</h2>
+								<p><strong>24/7 Emergency Electrical Response</strong></p>
+								<p>For urgent electrical issues that pose safety risks or cause power outages, contact us immediately.</p>
+							</div>
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
-
-							<!-- Lists -->
-								<section>
-									<h2>Lists</h2>
-									<div class="row">
-										<div class="col-6 col-12-medium">
-											<h3>Unordered</h3>
+							<!-- Contact Information -->
+							<section>
+								<h2>Get Professional Electrical Services</h2>
+								<p>Ready to ensure your electrical systems are safe, efficient, and reliable? R.C. Electric Laboratory provides comprehensive electrical engineering and safety services throughout Padre Garcia, Batangas and surrounding areas.</p>
+								
+								<div class="row">
+									<div class="col-6 col-12-medium">
+										<div class="contact-card">
+											<h3><span class="electrical-icon">📍</span> Laboratory Location</h3>
+											<p><strong>R.C. Electric Laboratory</strong><br />
+											Padre Garcia, Batangas<br />
+											Philippines</p>
+										</div>
+									</div>
+									<div class="col-6 col-12-medium">
+										<div class="contact-card">
+											<h3><span class="electrical-icon">⚡</span> Our Specialties</h3>
 											<ul>
-												<li>Dolor pulvinar etiam.</li>
-												<li>Sagittis adipiscing.</li>
-												<li>Felis enim feugiat.</li>
-											</ul>
-											<h3>Alternate</h3>
-											<ul class="alt">
-												<li>Dolor pulvinar etiam.</li>
-												<li>Sagittis adipiscing.</li>
-												<li>Felis enim feugiat.</li>
-											</ul>
-										</div>
-										<div class="col-6 col-12-medium">
-											<h3>Ordered</h3>
-											<ol>
-												<li>Dolor pulvinar etiam.</li>
-												<li>Etiam vel felis viverra.</li>
-												<li>Felis enim feugiat.</li>
-												<li>Dolor pulvinar etiam.</li>
-												<li>Etiam vel felis lorem.</li>
-												<li>Felis enim et feugiat.</li>
-											</ol>
-											<h3>Icons</h3>
-											<ul class="icons">
-												<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-												<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+												<li>Electrical Safety Testing</li>
+												<li>Power System Analysis</li>
+												<li>Engineering Consultation</li>
+												<li>Emergency Response</li>
 											</ul>
 										</div>
 									</div>
-									<h2>Actions</h2>
-									<div class="row">
-										<div class="col-6 col-12-medium">
+								</div>
+							</section>
+
+							<!-- Professional Contact Form -->
+							<section>
+								<h2>Request Professional Service</h2>
+								<form method="post" action="#" style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 15px;">
+									<div class="row gtr-uniform">
+										<div class="col-6 col-12-xsmall">
+											<input type="text" name="client-name" id="client-name" value="" placeholder="Full Name" required />
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<input type="email" name="client-email" id="client-email" value="" placeholder="Email Address" required />
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<input type="tel" name="client-phone" id="client-phone" value="" placeholder="Phone Number" />
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<input type="text" name="company-name" id="company-name" value="" placeholder="Company/Organization (Optional)" />
+										</div>
+										<div class="col-12">
+											<select name="service-category" id="service-category">
+												<option value="">- Select Service Type -</option>
+												<option value="residential">Residential Electrical Services</option>
+												<option value="commercial">Commercial Power Analysis</option>
+												<option value="industrial">Industrial System Design</option>
+												<option value="safety">Safety Inspection & Testing</option>
+												<option value="emergency">Emergency Electrical Service</option>
+												<option value="consultation">Engineering Consultation</option>
+											</select>
+										</div>
+										<div class="col-4 col-12-small">
+											<input type="radio" id="priority-routine" name="service-priority" checked>
+											<label for="priority-routine">Routine Service</label>
+										</div>
+										<div class="col-4 col-12-small">
+											<input type="radio" id="priority-urgent" name="service-priority">
+											<label for="priority-urgent">Urgent</label>
+										</div>
+										<div class="col-4 col-12-small">
+											<input type="radio" id="priority-emergency" name="service-priority">
+											<label for="priority-emergency">Emergency</label>
+										</div>
+										<div class="col-6 col-12-small">
+											<input type="checkbox" id="site-visit" name="site-visit">
+											<label for="site-visit">Site visit required</label>
+										</div>
+										<div class="col-6 col-12-small">
+											<input type="checkbox" id="quote-request" name="quote-request" checked>
+											<label for="quote-request">Request service quote</label>
+										</div>
+										<div class="col-12">
+											<textarea name="project-details" id="project-details" placeholder="Please describe your electrical service needs, facility type, and any specific concerns..." rows="6"></textarea>
+										</div>
+										<div class="col-12">
 											<ul class="actions">
-												<li><a href="#" class="button primary">Default</a></li>
-												<li><a href="#" class="button">Default</a></li>
-											</ul>
-											<ul class="actions small">
-												<li><a href="#" class="button primary small">Small</a></li>
-												<li><a href="#" class="button small">Small</a></li>
-											</ul>
-											<ul class="actions stacked">
-												<li><a href="#" class="button primary">Default</a></li>
-												<li><a href="#" class="button">Default</a></li>
-											</ul>
-											<ul class="actions stacked">
-												<li><a href="#" class="button primary small">Small</a></li>
-												<li><a href="#" class="button small">Small</a></li>
-											</ul>
-										</div>
-										<div class="col-6 col-12-medium">
-											<ul class="actions stacked">
-												<li><a href="#" class="button primary fit">Default</a></li>
-												<li><a href="#" class="button fit">Default</a></li>
-											</ul>
-											<ul class="actions stacked">
-												<li><a href="#" class="button primary small fit">Small</a></li>
-												<li><a href="#" class="button small fit">Small</a></li>
+												<li><input type="submit" value="Submit Service Request" class="primary" /></li>
+												<li><input type="reset" value="Clear Form" /></li>
 											</ul>
 										</div>
 									</div>
-								</section>
+								</form>
+							</section>
 
-							<!-- Table -->
-								<section>
-									<h2>Table</h2>
-									<h3>Default</h3>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
+							<!-- Service Areas Table -->
+							<section>
+								<h2>Service Areas & Specializations</h2>
+								<h3>Coverage Areas</h3>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Service Type</th>
+												<th>Description</th>
+												<th>Response Time</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Emergency Services</td>
+												<td>24/7 emergency electrical response for safety hazards</td>
+												<td>Immediate</td>
+											</tr>
+											<tr>
+												<td>Safety Inspections</td>
+												<td>Comprehensive electrical safety audits and testing</td>
+												<td>1-3 Days</td>
+											</tr>
+											<tr>
+												<td>Power Analysis</td>
+												<td>Detailed power quality and system performance studies</td>
+												<td>3-5 Days</td>
+											</tr>
+											<tr>
+												<td>System Design</td>
+												<td>Custom electrical system design and engineering</td>
+												<td>1-2 Weeks</td>
+											</tr>
+											<tr>
+												<td>Consultation</td>
+												<td>Expert electrical engineering consultation services</td>
+												<td>Same Day</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<h3>Technical Capabilities</h3>
+								<div class="table-wrapper">
+									<table class="alt">
+										<thead>
+											<tr>
+												<th>Capability</th>
+												<th>Equipment/Method</th>
+												<th>Applications</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Power Quality Analysis</td>
+												<td>Advanced power analyzers and meters</td>
+												<td>Commercial, Industrial facilities</td>
+											</tr>
+											<tr>
+												<td>Thermal Imaging</td>
+												<td>FLIR thermal imaging cameras</td>
+												<td>Predictive maintenance, fault detection</td>
+											</tr>
+											<tr>
+												<td>Arc Flash Studies</td>
+												<td>Computer modeling and field testing</td>
+												<td>Safety compliance, PPE requirements</td>
+											</tr>
+											<tr>
+												<td>Ground Testing</td>
+												<td>Digital ground resistance testers</td>
+												<td>Electrical safety verification</td>
+											</tr>
+											<tr>
+												<td>Circuit Analysis</td>
+												<td>Oscilloscopes, multimeters, analyzers</td>
+												<td>RC circuits, filter design, troubleshooting</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</section>
+
+							<!-- Professional Certifications & Equipment -->
+							<section>
+								<h3>Professional Qualifications</h3>
+								<ul class="actions">
+									<li><a href="#" class="button primary">Licensed Electrical Engineers</a></li>
+									<li><a href="#" class="button">Certified Safety Specialists</a></li>
+									<li><a href="#" class="button">Advanced Test Equipment</a></li>
+								</ul>
+								<ul class="actions fit">
+									<li><a href="#" class="button primary fit">Residential Services</a></li>
+									<li><a href="#" class="button fit">Commercial Solutions</a></li>
+									<li><a href="#" class="button fit">Industrial Systems</a></li>
+								</ul>
+								
+								<h3>Emergency Response Capabilities</h3>
+								<ul class="actions">
+									<li><a href="#" class="button primary icon solid fa-phone">24/7 Hotline</a></li>
+									<li><a href="#" class="button icon solid fa-truck">Mobile Laboratory</a></li>
+									<li><a href="#" class="button icon solid fa-shield-alt">Safety Response</a></li>
+								</ul>
+							</section>
+
+							<!-- Contact Methods -->
+							<section>
+								<h2>Connect With R.C. Electric Laboratory</h2>
+								
+								<div class="row">
+									<div class="col-6 col-12-medium">
+										<h3>Professional Contact</h3>
+										<ul>
+											<li><strong>Laboratory:</strong> R.C. Electric Laboratory</li>
+											<li><strong>Location:</strong> Padre Garcia, Batangas, Philippines</li>
+											<li><strong>Services:</strong> Electrical Engineering & Safety</li>
+											<li><strong>Coverage:</strong> Batangas Province & Surrounding Areas</li>
+											<li><strong>Response:</strong> 24/7 Emergency Services Available</li>
+										</ul>
 									</div>
-
-									<h3>Alternate</h3>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
+									<div class="col-6 col-12-medium">
+										<h3>Follow Our Work</h3>
+										<ul class="icons">
+											<li><a href="https://www.facebook.com/RCElectricLaboratory" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+											<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+											<li><a href="#" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+											<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										</ul>
+										
+										<h3>Professional Network</h3>
+										<p>Member of professional electrical engineering associations and certified for compliance with international safety standards.</p>
 									</div>
-								</section>
+								</div>
+							</section>
 
-							<!-- Buttons -->
-								<section>
-									<h3>Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button large">Large</a></li>
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions fit">
-										<li><a href="#" class="button primary fit">Fit</a></li>
-										<li><a href="#" class="button fit">Fit</a></li>
-										<li><a href="#" class="button fit">Fit</a></li>
-									</ul>
-									<ul class="actions fit small">
-										<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-										<li><a href="#" class="button fit small">Fit + Small</a></li>
-										<li><a href="#" class="button fit small">Fit + Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-upload">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-save">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
-
-							<!-- Form -->
-								<section>
-									<h2>Form</h2>
-									<form method="post" action="#">
-										<div class="row gtr-uniform">
-											<div class="col-6 col-12-xsmall">
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-											</div>
-											<div class="col-6 col-12-xsmall">
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-											</div>
-											<div class="col-12">
-												<select name="demo-category" id="demo-category">
-													<option value="">- Category -</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="col-4 col-12-small">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="col-4 col-12-small">
-												<input type="radio" id="demo-priority-normal" name="demo-priority">
-												<label for="demo-priority-normal">Normal</label>
-											</div>
-											<div class="col-4 col-12-small">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="col-6 col-12-small">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="col-6 col-12-small">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="col-12">
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-											<div class="col-12">
-												<ul class="actions">
-													<li><input type="submit" value="Send Message" class="primary" /></li>
-													<li><input type="reset" value="Reset" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>
-								</section>
-
-							<!-- Image -->
-								<section>
-									<h2>Image</h2>
-									<h3>Fit</h3>
-									<div class="box alt">
-										<div class="row gtr-uniform">
-											<div class="col-12"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-										</div>
-									</div>
-									<h3>Left &amp; Right</h3>
-									<p><span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-									<p><span class="image right"><img src="images/pic06.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-								</section>
+							<!-- Safety Message -->
+							<section style="background: rgba(231, 76, 60, 0.1); padding: 2rem; border-radius: 10px; border-left: 5px solid #e74c3c;">
+								<h3><span class="electrical-icon">⚠️</span> Safety First Philosophy</h3>
+								<blockquote>"We dream of a world safe from electrical hazards and from unplanned power downtime!" - This is not just our mission statement, but our commitment to every client we serve. Every project begins with safety, and no work is complete until it meets the highest safety standards.</blockquote>
+								
+								<h4>Our Promise to You:</h4>
+								<ul>
+									<li><strong>Zero Compromise on Safety:</strong> All work meets or exceeds safety codes</li>
+									<li><strong>Professional Excellence:</strong> Licensed engineers with continuous training</li>
+									<li><strong>Reliable Service:</strong> Preventing unplanned downtime through proactive maintenance</li>
+									<li><strong>Emergency Response:</strong> 24/7 availability for critical situations</li>
+								</ul>
+							</section>
 
 						</div>
 					</section>
@@ -345,7 +332,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<footer id="footer" class="wrapper alt">
 				<div class="inner">
 					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; 2025 R.C. Electric Laboratory. All rights reserved.</li>
+						<li>Professional Electrical Engineering Services</li>
+						<li>Licensed & Insured | Emergency Services Available</li>
 					</ul>
 				</div>
 			</footer>

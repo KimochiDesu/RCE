@@ -6,22 +6,57 @@
 -->
 <html>
 	<head>
-		<title>Generic - Hyperspace by HTML5 UP</title>
+		<title>Services - R.C. Electric Laboratory</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" type="image/png" href="RCEicon.png" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.logo {
+				height: 65px;
+				width: auto;
+				margin-right: 15px;
+				vertical-align: middle;
+			}
+			
+			.header-brand {
+				display: flex;
+				align-items: center;
+				text-decoration: none;
+				color: inherit;
+				font-weight: 600;
+			}
+			
+			.electrical-icon {
+				background: linear-gradient(135deg, #f39c12, #e74c3c);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+			}
+
+			.service-highlight {
+				background: linear-gradient(135deg, #2c3e50, #34495e);
+				padding: 2rem;
+				border-radius: 15px;
+				margin: 2rem 0;
+				border-left: 5px solid #f39c12;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="title">Hyperspace</a>
-				<nav>
-					<ul>
+			<header id="header" style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(0,0,0,0.9); padding: 1rem 2rem;">
+				<a href="index.html" class="header-brand">
+					<img src="RCELogo.png" alt="R.C. Electric Laboratory Logo" class="logo" />
+					<span class="title">R.C. Electric Laboratory</span>
+				</a>
+				<nav style="margin-left: auto;">
+					<ul style="display: flex; gap: 2rem; margin: 0; padding: 0; list-style: none;">
 						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html" class="active">Generic</a></li>
-						<li><a href="elements.html">Elements</a></li>
+						<li><a href="generic.html" class="active">Services</a></li>
+						<li><a href="elements.html">Contact</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -30,12 +65,58 @@
 			<div id="wrapper">
 
 				<!-- Main -->
-					<section id="main" class="wrapper">
+					<section id="main" class="wrapper" style="margin-top: 100px;">
 						<div class="inner">
-							<h1 class="major">A Generic Page</h1>
-							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<h1 class="major">Professional Electrical Services</h1>
+							<span class="image fit"><img src="images/pic04.jpg" alt="Electrical Laboratory Equipment" /></span>
+							
+							<div class="service-highlight">
+								<h2><span class="electrical-icon">⚡</span> Our Mission</h2>
+								<p><strong>"We dream of a world safe from electrical hazards and from unplanned power downtime!"</strong></p>
+								<p>R.C. Electric Laboratory is your trusted partner for comprehensive electrical engineering services in Padre Garcia, Batangas and surrounding areas.</p>
+							</div>
+
+							<h2>Comprehensive Electrical Solutions</h2>
+							<p>At R.C. Electric Laboratory, we provide a full spectrum of electrical engineering and safety services designed to protect lives, property, and ensure uninterrupted power supply. Our team of certified professionals uses state-of-the-art equipment and follows industry best practices to deliver exceptional results.</p>
+
+							<h3><span class="electrical-icon">🔍</span> Power System Analysis & Testing</h3>
+							<p>Our comprehensive power system analysis services include detailed electrical load studies, power quality assessment, harmonic analysis, and system efficiency optimization. We utilize advanced diagnostic equipment to identify potential issues before they lead to costly downtime or safety hazards.</p>
+							<ul>
+								<li><strong>Load Flow Analysis:</strong> Comprehensive system modeling and analysis</li>
+								<li><strong>Power Quality Studies:</strong> Voltage regulation, harmonic distortion assessment</li>
+								<li><strong>Arc Flash Analysis:</strong> Safety hazard assessment and mitigation strategies</li>
+								<li><strong>Ground Fault Testing:</strong> Electrical safety system verification</li>
+							</ul>
+
+							<h3><span class="electrical-icon">🛡️</span> Safety Compliance & Certification</h3>
+							<p>Safety is our top priority. We provide thorough electrical safety inspections, compliance testing, and certification services to ensure your electrical systems meet all local and international safety standards. Our certified technicians conduct comprehensive assessments to identify and mitigate electrical hazards.</p>
+							<ul>
+								<li><strong>Safety Inspections:</strong> Comprehensive facility electrical safety audits</li>
+								<li><strong>Code Compliance:</strong> Ensuring adherence to electrical codes and standards</li>
+								<li><strong>Safety Training:</strong> Educational programs for facility personnel</li>
+								<li><strong>Emergency Response:</strong> 24/7 emergency electrical services</li>
+							</ul>
+
+							<h3><span class="electrical-icon">⚙️</span> Engineering Consultation & Design</h3>
+							<p>Our experienced electrical engineers provide expert consultation services for system design, troubleshooting, and optimization. From RC circuit analysis to complete electrical system design, we deliver innovative solutions tailored to your specific needs.</p>
+							<ul>
+								<li><strong>Circuit Design:</strong> Custom electrical circuit design and analysis</li>
+								<li><strong>System Integration:</strong> Seamless integration of electrical systems</li>
+								<li><strong>Troubleshooting:</strong> Expert diagnosis of complex electrical issues</li>
+								<li><strong>Optimization:</strong> System efficiency and performance improvements</li>
+							</ul>
+
+							<h3><span class="electrical-icon">🏭</span> Industry Applications</h3>
+							<p>We serve a wide range of industries and applications, providing specialized electrical services for:</p>
+							<ul>
+								<li><strong>Residential:</strong> Home electrical safety inspections, wiring upgrades, panel installations</li>
+								<li><strong>Commercial:</strong> Office buildings, retail spaces, power quality analysis</li>
+								<li><strong>Industrial:</strong> Manufacturing facilities, process control systems, motor analysis</li>
+								<li><strong>Institutional:</strong> Schools, hospitals, government facilities</li>
+							</ul>
+
+							<h3><span class="electrical-icon">🔧</span> Predictive Maintenance Programs</h3>
+							<p>Prevent costly downtime with our comprehensive predictive maintenance programs. Using thermal imaging, vibration analysis, and electrical testing, we identify potential equipment failures before they occur, ensuring reliable operation and extending equipment life.</p>
 						</div>
 					</section>
 
@@ -45,7 +126,8 @@
 			<footer id="footer" class="wrapper alt">
 				<div class="inner">
 					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; 2025 R.C. Electric Laboratory. All rights reserved.</li>
+						<li>Professional Electrical Engineering Services | Padre Garcia, Batangas</li>
 					</ul>
 				</div>
 			</footer>

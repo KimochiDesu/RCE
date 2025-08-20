@@ -6,13 +6,142 @@
 -->
 <html>
 	<head>
-		<title>Hyperspace by HTML5 UP</title>
+		<title>R.C. Electric Laboratory - Engineering Excellence</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" type="image/png" href="RCEicon.png" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Custom CSS for R.C. Electric Laboratory */
+			.logo {
+				height: 65px;
+				width: auto;
+				margin-right: 15px;
+				vertical-align: middle;
+				filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+				transition: transform 0.3s ease;
+			}
+			
+			.logo:hover {
+				transform: scale(1.05);
+			}
+			
+			.header-brand {
+				display: flex;
+				align-items: center;
+				text-decoration: none;
+				color: inherit;
+				font-weight: 600;
+				font-size: 1.2em;
+			}
+			
+			.header-brand:hover {
+				color: #f39c12;
+			}
+
+			header {
+				backdrop-filter: blur(10px);
+				box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+				border-bottom: 1px solid rgba(255,255,255,0.1);
+			}
+
+			.electrical-icon {
+				background: linear-gradient(135deg, #f39c12, #e74c3c);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				font-size: 1.2em;
+			}
+			
+			.safety-highlight {
+				background: linear-gradient(135deg, #e74c3c 0%, #c0392b 50%, #8e44ad 100%);
+				padding: 2.5rem;
+				border-radius: 15px;
+				margin: 2rem 0;
+				color: white;
+				position: relative;
+				overflow: hidden;
+				box-shadow: 0 8px 32px rgba(231, 76, 60, 0.3);
+				border: 1px solid rgba(255,255,255,0.1);
+			}
+
+			.service-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+				gap: 2rem;
+				margin: 2rem 0;
+			}
+			
+			.service-card {
+				background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+				padding: 2rem;
+				border-radius: 15px;
+				border-left: 4px solid #f39c12;
+				border-top: 1px solid rgba(243, 156, 18, 0.3);
+				transition: all 0.4s ease;
+				position: relative;
+				overflow: hidden;
+				backdrop-filter: blur(10px);
+				box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+			}
+			
+			.service-card:hover {
+				transform: translateY(-8px) scale(1.02);
+				border-left-color: #e74c3c;
+				box-shadow: 0 12px 40px rgba(243, 156, 18, 0.2);
+			}
+
+			.button {
+				background: linear-gradient(135deg, #f39c12, #e74c3c);
+				border-radius: 25px;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+				transition: all 0.3s ease;
+				box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+			}
+
+			.button:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 6px 25px rgba(243, 156, 18, 0.4);
+			}
+
+			h1 {
+				background: linear-gradient(135deg, #f39c12, #e74c3c);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+			}
+
+			@media (max-width: 768px) {
+				.logo {
+					height: 45px;
+				}
+				
+				.service-grid {
+					grid-template-columns: 1fr;
+					gap: 1rem;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
+
+		<!-- Header (Add this section) -->
+		<header id="header" style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(0,0,0,0.9); padding: 1rem 2rem;">
+			<a href="index.html" class="header-brand">
+				<img src="RCELogo.png" alt="R.C. Electric Laboratory Logo" class="logo" />
+				<span class="title">R.C. Electric Laboratory</span>
+			</a>
+			<nav style="margin-left: auto;">
+				<ul style="display: flex; gap: 2rem; margin: 0; padding: 0; list-style: none;">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="generic.html">Services</a></li>
+					<li><a href="elements.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
 
 		<!-- Sidebar -->
 			<section id="sidebar">
@@ -20,8 +149,8 @@
 					<nav>
 						<ul>
 							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">Who we are</a></li>
-							<li><a href="#two">What we do</a></li>
+							<li><a href="#one">Our Services</a></li>
+							<li><a href="#two">Our Expertise</a></li>
 							<li><a href="#three">Get in touch</a></li>
 						</ul>
 					</nav>
@@ -32,13 +161,17 @@
 			<div id="wrapper">
 
 				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
+					<section id="intro" class="wrapper style1 fullscreen fade-up" style="margin-top: 80px;">
 						<div class="inner">
-							<h1>Hyperspace</h1>
-							<p>Just another fine responsive site template designed by <a href="http://html5up.net">HTML5 UP</a><br />
-							and released for free under the <a href="http://html5up.net/license">Creative Commons</a>.</p>
+							<h1>R.C. Electric Laboratory</h1>
+							<p>Professional Electrical Engineering & Safety Services<br />
+							<strong>We dream of a world safe from electrical hazards and from unplanned power downtime!</strong></p>
+							<div class="safety-highlight">
+								<h3><span class="electrical-icon">⚡</span> Safety • Reliability • Excellence</h3>
+								<p>Specializing in electrical system analysis, power quality assessment, and comprehensive safety solutions for residential, commercial, and industrial applications.</p>
+							</div>
 							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Learn more</a></li>
+								<li><a href="#one" class="button scrolly">Explore Our Services</a></li>
 							</ul>
 						</div>
 					</section>
@@ -46,11 +179,11 @@
 				<!-- One -->
 					<section id="one" class="wrapper style2 spotlights">
 						<section>
-							<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
+							<a href="#" class="image"><img src="images/pic01.jpg" alt="Electrical Testing" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Sed ipsum dolor</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+									<h2><span class="electrical-icon">⚡</span> Power System Analysis</h2>
+									<p>Comprehensive electrical system diagnostics, load analysis, and power quality assessment. Our advanced testing equipment ensures optimal system performance and identifies potential issues before they become costly problems.</p>
 									<ul class="actions">
 										<li><a href="generic.html" class="button">Learn more</a></li>
 									</ul>
@@ -58,11 +191,11 @@
 							</div>
 						</section>
 						<section>
-							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
+							<a href="#" class="image"><img src="images/pic02.jpg" alt="Safety Inspection" data-position="top center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Feugiat consequat</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+									<h2><span class="electrical-icon">🛡️</span> Safety Compliance & Testing</h2>
+									<p>Electrical safety inspections, compliance testing, and certification services. We ensure your electrical systems meet all safety standards and regulatory requirements, protecting lives and property.</p>
 									<ul class="actions">
 										<li><a href="generic.html" class="button">Learn more</a></li>
 									</ul>
@@ -70,11 +203,11 @@
 							</div>
 						</section>
 						<section>
-							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
+							<a href="#" class="image"><img src="images/pic03.jpg" alt="Engineering Services" data-position="25% 25%" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Ultricies aliquam</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+									<h2><span class="electrical-icon">⚙️</span> Engineering Consultation</h2>
+									<p>Expert electrical engineering consultation for design, troubleshooting, and system optimization. From circuit analysis to full system design, our engineers provide innovative solutions.</p>
 									<ul class="actions">
 										<li><a href="generic.html" class="button">Learn more</a></li>
 									</ul>
@@ -86,42 +219,44 @@
 				<!-- Two -->
 					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
-							<h2>What we do</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Lorem ipsum amet</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-lock"></span>
-									<h3>Aliquam sed nullam</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>Sed erat ullam corper</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3>Veroeros quis lorem</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>Urna quis bibendum</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>Aliquam urna dapibus</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
+							<h2>Our Technical Expertise</h2>
+							<p>R.C. Electric Laboratory combines cutting-edge technology with decades of experience to deliver unparalleled electrical engineering services. We specialize in preventing electrical hazards and eliminating unplanned power downtime.</p>
+							
+							<div class="service-grid">
+								<div class="service-card">
+									<span class="icon solid major fa-bolt electrical-icon"></span>
+									<h3>Circuit Analysis & Design</h3>
+									<p>Advanced RC circuit analysis, filter design, and electrical system modeling using state-of-the-art simulation tools and measurement equipment.</p>
+								</div>
+								<div class="service-card">
+									<span class="icon solid major fa-shield-alt electrical-icon"></span>
+									<h3>Safety Systems</h3>
+									<p>Comprehensive safety system design, ground fault protection, arc flash analysis, and electrical hazard assessment for all facility types.</p>
+								</div>
+								<div class="service-card">
+									<span class="icon solid major fa-cog electrical-icon"></span>
+									<h3>Power Quality Analysis</h3>
+									<p>Detailed power quality studies, harmonic analysis, voltage regulation, and power factor correction to optimize system efficiency.</p>
+								</div>
+								<div class="service-card">
+									<span class="icon solid major fa-desktop electrical-icon"></span>
+									<h3>Predictive Maintenance</h3>
+									<p>Proactive maintenance programs using thermal imaging, vibration analysis, and electrical testing to prevent unexpected failures.</p>
+								</div>
+								<div class="service-card">
+									<span class="icon solid major fa-tools electrical-icon"></span>
+									<h3>Troubleshooting</h3>
+									<p>Expert diagnostic services for complex electrical problems, using advanced test equipment and systematic troubleshooting methodologies.</p>
+								</div>
+								<div class="service-card">
+									<span class="icon major fa-certificate electrical-icon"></span>
+									<h3>Compliance Testing</h3>
+									<p>Comprehensive testing and certification services ensuring compliance with local and international electrical safety standards.</p>
+								</div>
 							</div>
+							
 							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn more</a></li>
+								<li><a href="generic.html" class="button">View All Services</a></li>
 							</ul>
 						</div>
 					</section>
@@ -129,51 +264,68 @@
 				<!-- Three -->
 					<section id="three" class="wrapper style1 fade-up">
 						<div class="inner">
-							<h2>Get in touch</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+							<h2>Get Professional Electrical Services</h2>
+							<p>Ready to ensure your electrical systems are safe, efficient, and reliable? Contact R.C. Electric Laboratory today for a consultation.</p>
 							<div class="split style1">
 								<section>
-									<form method="post" action="#">
+									<form method="post" action="#" style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 10px;">
 										<div class="fields">
 											<div class="field half">
 												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
+												<input type="text" name="name" id="name" required />
 											</div>
 											<div class="field half">
 												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
+												<input type="email" name="email" id="email" required />
+											</div>
+											<div class="field half">
+												<label for="phone">Phone</label>
+												<input type="tel" name="phone" id="phone" />
+											</div>
+											<div class="field half">
+												<label for="service">Service Type</label>
+												<select name="service" id="service">
+													<option value="">Select Service Type</option>
+													<option value="residential">Residential Inspection</option>
+													<option value="commercial">Commercial Analysis</option>
+													<option value="industrial">Industrial Services</option>
+													<option value="emergency">Emergency Service</option>
+													<option value="consultation">Engineering Consultation</option>
+												</select>
 											</div>
 											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
+												<label for="message">Project Details</label>
+												<textarea name="message" id="message" rows="5" placeholder="Please describe your electrical service needs..."></textarea>
 											</div>
 										</div>
 										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
+											<li><input type="submit" value="Request Service Quote" class="primary" /></li>
 										</ul>
 									</form>
 								</section>
 								<section>
 									<ul class="contact">
 										<li>
-											<h3>Address</h3>
-											<span>12345 Somewhere Road #654<br />
-											Nashville, TN 00000-0000<br />
-											USA</span>
+											<h3>Laboratory Location</h3>
+											<span>R.C. Electric Laboratory<br />
+											Padre Garcia, Batangas<br />
+											Philippines</span>
 										</li>
 										<li>
-											<h3>Email</h3>
-											<a href="#">user@untitled.tld</a>
+											<h3>Professional Services</h3>
+											<span>✓ Electrical Safety Testing<br />
+											✓ Power System Analysis<br />
+											✓ Engineering Consultation<br />
+											✓ Emergency Response</span>
 										</li>
 										<li>
-											<h3>Phone</h3>
-											<span>(000) 000-0000</span>
+											<h3>Emergency Hotline</h3>
+											<span style="color: #e74c3c; font-weight: bold;">24/7 Emergency Service Available</span>
 										</li>
 										<li>
 											<h3>Social</h3>
 											<ul class="icons">
-												<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+												<li><a href="https://www.facebook.com/RCElectricLaboratory" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 												<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 												<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 												<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
@@ -191,7 +343,9 @@
 			<footer id="footer" class="wrapper style1-alt">
 				<div class="inner">
 					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; 2025 R.C. Electric Laboratory. All rights reserved.</li>
+						<li>Professional Electrical Engineering Services | Padre Garcia, Batangas</li>
+						<li>Licensed & Insured | Emergency Services Available</li>
 					</ul>
 				</div>
 			</footer>
