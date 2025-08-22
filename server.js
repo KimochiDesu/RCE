@@ -1,6 +1,6 @@
 // ===== FULL-STACK E-LEARNING SERVER WITH POSTGRESQL =====
 // Node.js/Express server with Railway PostgreSQL database integration
-// Complete implementation replacing mock data with real database operations
+// FIXED: Correct static file serving and routing
 
 const express = require('express');
 const cors = require('cors');
@@ -14,7 +14,9 @@ const PORT = process.env.PORT || 3000;
 // ===== MIDDLEWARE SETUP =====
 app.use(express.json());
 app.use(cors());
-app.use(express.static(path.join(__dirname, 'public'))); // Serve static files
+
+// FIXED: Serve static files from current directory (not public folder)
+app.use(express.static(__dirname));
 
 // ===== POSTGRESQL DATABASE CONNECTION =====
 const pool = new Pool({
@@ -553,18 +555,37 @@ app.delete('/api/questions/:id', async (req, res) => {
     }
 });
 
-// ===== SERVE STATIC FILES =====
-// Serve HTML files
+// ===== FIXED: PROPER STATIC FILE ROUTING =====
+
+// Root route - serve index.html
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+// FIXED: Corrected admin routes to match HTML file names
 app.get('/admin-login', (req, res) => {
+    res.sendFile(path.join(__dirname, 'admin-login.html'));
+});
+
+app.get('/admin-login.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'admin-login.html'));
 });
 
 app.get('/admin-dashboard', (req, res) => {
     res.sendFile(path.join(__dirname, 'admin-dashboard.html'));
+});
+
+app.get('/admin-dashboard.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'admin-dashboard.html'));
+});
+
+// FIXED: Ensure all static assets are accessible
+app.get('/script.js', (req, res) => {
+    res.sendFile(path.join(__dirname, 'script.js'));
+});
+
+app.get('/style.css', (req, res) => {
+    res.sendFile(path.join(__dirname, 'style.css'));
 });
 
 // ===== ERROR HANDLING =====
@@ -607,6 +628,10 @@ async function startServer() {
             console.log(`📍 Server running on: http://localhost:${PORT}`);
             console.log(`🗄️  Database: Connected to Railway PostgreSQL`);
             console.log(`🔐 Admin credentials: admin / admin123`);
+            console.log('\n📋 Available Routes:');
+            console.log('   GET  /                   - Main learning portal');
+            console.log('   GET  /admin-login        - Admin login page');
+            console.log('   GET  /admin-dashboard    - Admin dashboard');
             console.log('\n📋 Available API Endpoints:');
             console.log('   GET  /api/content        - Retrieve all content from database');
             console.log('   POST /api/login          - Admin authentication');
@@ -614,7 +639,7 @@ async function startServer() {
             console.log('   DELETE /api/lessons/:id  - Delete lesson from database');
             console.log('   POST /api/questions      - Add new question to database');
             console.log('   DELETE /api/questions/:id - Delete question from database');
-            console.log('\n✅ PostgreSQL Database Integration Complete!');
+            console.log('\n✅ FIXED: Static file serving and routing issues resolved!');
             console.log('📊 All data is now persisted in your Railway database\n');
         });
         
