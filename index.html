@@ -1,363 +1,240 @@
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>R.C. Electric Laboratory - Engineering Excellence</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="icon" type="image/png" href="RCEicon.png" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			/* Custom CSS for R.C. Electric Laboratory */
-			.logo {
-				height: 65px;
-				width: auto;
-				margin-right: 15px;
-				vertical-align: middle;
-				filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-				transition: transform 0.3s ease;
-			}
-			
-			.logo:hover {
-				transform: scale(1.05);
-			}
-			
-			.header-brand {
-				display: flex;
-				align-items: center;
-				text-decoration: none;
-				color: inherit;
-				font-weight: 600;
-				font-size: 1.2em;
-			}
-			
-			.header-brand:hover {
-				color: #f39c12;
-			}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Fundamentals - CIA Triad & Non-Repudiation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Controls -->
+    <div class="nav-controls">
+        <button id="prevBtn" class="nav-btn">← Previous</button>
+        <span id="slideCounter" class="slide-counter">1 / 6</span>
+        <button id="nextBtn" class="nav-btn">Next →</button>
+    </div>
 
-			header {
-				backdrop-filter: blur(10px);
-				box-shadow: 0 2px 20px rgba(0,0,0,0.3);
-				border-bottom: 1px solid rgba(255,255,255,0.1);
-			}
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div id="progressBar" class="progress-bar"></div>
+    </div>
 
-			.electrical-icon {
-				background: linear-gradient(135deg, #f39c12, #e74c3c);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				background-clip: text;
-				font-size: 1.2em;
-			}
-			
-			.safety-highlight {
-				background: linear-gradient(135deg, #e74c3c 0%, #c0392b 50%, #8e44ad 100%);
-				padding: 2.5rem;
-				border-radius: 15px;
-				margin: 2rem 0;
-				color: white;
-				position: relative;
-				overflow: hidden;
-				box-shadow: 0 8px 32px rgba(231, 76, 60, 0.3);
-				border: 1px solid rgba(255,255,255,0.1);
-			}
+    <!-- Main Content Container -->
+    <div class="presentation-container">
+        
+        <!-- Slide 1: Introduction -->
+        <div class="slide active" id="slide1">
+            <div class="slide-content">
+                <h1>Cybersecurity Fundamentals</h1>
+                <h2>CIA Triad & Non-Repudiation</h2>
+                <div class="intro-grid">
+                    <div class="concept-card">
+                        <div class="icon">🔒</div>
+                        <h3>Confidentiality</h3>
+                        <p>Protecting information from unauthorized access</p>
+                    </div>
+                    <div class="concept-card">
+                        <div class="icon">🛡️</div>
+                        <h3>Integrity</h3>
+                        <p>Ensuring data remains accurate and unchanged</p>
+                    </div>
+                    <div class="concept-card">
+                        <div class="icon">⚡</div>
+                        <h3>Availability</h3>
+                        <p>Keeping systems and data accessible when needed</p>
+                    </div>
+                    <div class="concept-card">
+                        <div class="icon">✍️</div>
+                        <h3>Non-Repudiation</h3>
+                        <p>Preventing denial of actions or transactions</p>
+                    </div>
+                </div>
+                <p class="welcome-text">Welcome to your cybersecurity journey! These four pillars form the foundation of information security.</p>
+            </div>
+        </div>
 
-			.service-grid {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-				gap: 2rem;
-				margin: 2rem 0;
-			}
-			
-			.service-card {
-				background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
-				padding: 2rem;
-				border-radius: 15px;
-				border-left: 4px solid #f39c12;
-				border-top: 1px solid rgba(243, 156, 18, 0.3);
-				transition: all 0.4s ease;
-				position: relative;
-				overflow: hidden;
-				backdrop-filter: blur(10px);
-				box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-			}
-			
-			.service-card:hover {
-				transform: translateY(-8px) scale(1.02);
-				border-left-color: #e74c3c;
-				box-shadow: 0 12px 40px rgba(243, 156, 18, 0.2);
-			}
+        <!-- Slide 2: Confidentiality -->
+        <div class="slide" id="slide2">
+            <div class="slide-content">
+                <h1>🔒 Confidentiality</h1>
+                <div class="definition-box">
+                    <h3>What is Confidentiality?</h3>
+                    <p>Confidentiality ensures that sensitive information is only accessible to authorized individuals. Think of it as keeping secrets safe from prying eyes.</p>
+                </div>
+                
+                <div class="examples-section">
+                    <h3>Real-World Examples:</h3>
+                    <ul class="example-list">
+                        <li><strong>Password Protection:</strong> Your login credentials should only be known by you</li>
+                        <li><strong>Medical Records:</strong> Only authorized healthcare providers can access patient information</li>
+                        <li><strong>Financial Data:</strong> Bank account details are encrypted and protected</li>
+                        <li><strong>Company Secrets:</strong> Trade secrets and confidential business information</li>
+                    </ul>
+                </div>
 
-			.button {
-				background: linear-gradient(135deg, #f39c12, #e74c3c);
-				border-radius: 25px;
-				font-weight: 600;
-				text-transform: uppercase;
-				letter-spacing: 0.5px;
-				transition: all 0.3s ease;
-				box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
-			}
+                <div class="methods-section">
+                    <h3>How We Maintain Confidentiality:</h3>
+                    <div class="method-cards">
+                        <div class="method-card">
+                            <h4>Encryption</h4>
+                            <p>Converting data into coded format</p>
+                        </div>
+                        <div class="method-card">
+                            <h4>Access Controls</h4>
+                            <p>User permissions and authentication</p>
+                        </div>
+                        <div class="method-card">
+                            <h4>Data Classification</h4>
+                            <p>Labeling information by sensitivity level</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-			.button:hover {
-				transform: translateY(-2px);
-				box-shadow: 0 6px 25px rgba(243, 156, 18, 0.4);
-			}
+        <!-- Slide 3: Integrity -->
+        <div class="slide" id="slide3">
+            <div class="slide-content">
+                <h1>🛡️ Integrity</h1>
+                <div class="definition-box">
+                    <h3>What is Integrity?</h3>
+                    <p>Integrity ensures that data remains accurate, complete, and unchanged during storage or transmission. It's about maintaining the trustworthiness of information.</p>
+                </div>
+                
+                <div class="examples-section">
+                    <h3>Real-World Examples:</h3>
+                    <ul class="example-list">
+                        <li><strong>Email Authentication:</strong> Ensuring emails haven't been tampered with during delivery</li>
+                        <li><strong>Software Updates:</strong> Verifying that downloaded software hasn't been modified by malicious actors</li>
+                        <li><strong>Financial Transactions:</strong> Making sure transaction amounts aren't altered</li>
+                        <li><strong>Database Records:</strong> Preventing unauthorized changes to stored information</li>
+                    </ul>
+                </div>
 
-			h1 {
-				background: linear-gradient(135deg, #f39c12, #e74c3c);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				background-clip: text;
-			}
+                <div class="methods-section">
+                    <h3>How We Maintain Integrity:</h3>
+                    <div class="method-cards">
+                        <div class="method-card">
+                            <h4>Digital Signatures</h4>
+                            <p>Cryptographic proof of authenticity</p>
+                        </div>
+                        <div class="method-card">
+                            <h4>Checksums/Hashes</h4>
+                            <p>Mathematical verification of data</p>
+                        </div>
+                        <div class="method-card">
+                            <h4>Version Control</h4>
+                            <p>Tracking changes and maintaining history</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-			@media (max-width: 768px) {
-				.logo {
-					height: 45px;
-				}
-				
-				.service-grid {
-					grid-template-columns: 1fr;
-					gap: 1rem;
-				}
-			}
-		</style>
-	</head>
-	<body class="is-preload">
+        <!-- Slide 4: Availability -->
+        <div class="slide" id="slide4">
+            <div class="slide-content">
+                <h1>⚡ Availability</h1>
+                <div class="definition-box">
+                    <h3>What is Availability?</h3>
+                    <p>Availability ensures that systems, applications, and data are accessible and operational when authorized users need them. It's about keeping things running smoothly.</p>
+                </div>
+                
+                <div class="examples-section">
+                    <h3>Real-World Examples:</h3>
+                    <ul class="example-list">
+                        <li><strong>Website Uptime:</strong> Ensuring websites are accessible 24/7</li>
+                        <li><strong>Emergency Services:</strong> 911 systems must always be available</li>
+                        <li><strong>Banking Systems:</strong> ATMs and online banking working when customers need them</li>
+                        <li><strong>Email Services:</strong> Being able to send and receive emails reliably</li>
+                    </ul>
+                </div>
 
-		<!-- Header (Add this section) -->
-		<header id="header" style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(0,0,0,0.9); padding: 1rem 2rem;">
-			<a href="index.html" class="header-brand">
-				<img src="RCELogo.png" alt="R.C. Electric Laboratory Logo" class="logo" />
-				<span class="title">R.C. Electric Laboratory</span>
-			</a>
-			<nav style="margin-left: auto;">
-				<ul style="display: flex; gap: 2rem; margin: 0; padding: 0; list-style: none;">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="generic.html">Services</a></li>
-					<li><a href="elements.html">Contact</a></li>
-				</ul>
-			</nav>
-		</header>
+                <div class="methods-section">
+                    <h3>How We Maintain Availability:</h3>
+                    <div class="method-cards">
+                        <div class="method-card">
+                            <h4>Redundancy</h4>
+                            <p>Backup systems and multiple servers</p>
+                        </div>
+                        <div class="method-card">
+                            <h4>Load Balancing</h4>
+                            <p>Distributing traffic across multiple resources</p>
+                        </div>
+                        <div class="method-card">
+                            <h4>Disaster Recovery</h4>
+                            <p>Plans to restore systems after failures</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">Our Services</a></li>
-							<li><a href="#two">Our Expertise</a></li>
-							<li><a href="#three">Get in touch</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+        <!-- Slide 5: Non-Repudiation -->
+        <div class="slide" id="slide5">
+            <div class="slide-content">
+                <h1>✍️ Non-Repudiation</h1>
+                <div class="definition-box">
+                    <h3>What is Non-Repudiation?</h3>
+                    <p>Non-repudiation prevents someone from denying that they performed a specific action or sent a particular message. It provides proof of origin and delivery.</p>
+                </div>
+                
+                <div class="examples-section">
+                    <h3>Real-World Examples:</h3>
+                    <ul class="example-list">
+                        <li><strong>Digital Contracts:</strong> Electronic signatures that can't be denied later</li>
+                        <li><strong>Email Receipts:</strong> Proof that an email was sent and received</li>
+                        <li><strong>Financial Transactions:</strong> Bank records showing who authorized a payment</li>
+                        <li><strong>Legal Documents:</strong> Timestamped and digitally signed court filings</li>
+                    </ul>
+                </div>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+                <div class="methods-section">
+                    <h3>How We Achieve Non-Repudiation:</h3>
+                    <div class="method-cards">
+                        <div class="method-card">
+                            <h4>Digital Signatures</h4>
+                            <p>Cryptographic proof of identity</p>
+                        </div>
+                        <div class="method-card">
+                            <h4>Audit Logs</h4>
+                            <p>Detailed records of all actions</p>
+                        </div>
+                        <div class="method-card">
+                            <h4>Timestamps</h4>
+                            <p>Precise timing of events and actions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up" style="margin-top: 80px;">
-						<div class="inner">
-							<h1>R.C. Electric Laboratory</h1>
-							<p>Professional Electrical Engineering & Safety Services<br />
-							<strong>We dream of a world safe from electrical hazards and from unplanned power downtime!</strong></p>
-							<div class="safety-highlight">
-								<h3><span class="electrical-icon">⚡</span> Safety • Reliability • Excellence</h3>
-								<p>Specializing in electrical system analysis, power quality assessment, and comprehensive safety solutions for residential, commercial, and industrial applications.</p>
-							</div>
-							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Explore Our Services</a></li>
-							</ul>
-						</div>
-					</section>
+        <!-- Slide 6: Quiz -->
+        <div class="slide" id="slide6">
+            <div class="slide-content">
+                <h1>🎯 Knowledge Check</h1>
+                <div id="quizContainer">
+                    <div id="scoreDisplay" class="score-display">
+                        <h3>Your Score: <span id="currentScore">0</span> / 3</h3>
+                    </div>
+                    
+                    <!-- Quiz Questions (will be dynamically populated) -->
+                    <div id="questionContainer" class="question-container">
+                        <!-- Questions will be inserted here by JavaScript -->
+                    </div>
+                    
+                    <!-- Quiz Results -->
+                    <div id="quizResults" class="quiz-results hidden">
+                        <h2>Quiz Complete!</h2>
+                        <div id="finalScore" class="final-score"></div>
+                        <div id="resultMessage" class="result-message"></div>
+                        <button id="retakeQuiz" class="quiz-btn">Retake Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-				<!-- One -->
-					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<a href="#" class="image"><img src="images/pic01.jpg" alt="Electrical Testing" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2><span class="electrical-icon">⚡</span> Power System Analysis</h2>
-									<p>Comprehensive electrical system diagnostics, load analysis, and power quality assessment. Our advanced testing equipment ensures optimal system performance and identifies potential issues before they become costly problems.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/pic02.jpg" alt="Safety Inspection" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2><span class="electrical-icon">🛡️</span> Safety Compliance & Testing</h2>
-									<p>Electrical safety inspections, compliance testing, and certification services. We ensure your electrical systems meet all safety standards and regulatory requirements, protecting lives and property.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/pic03.jpg" alt="Engineering Services" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2><span class="electrical-icon">⚙️</span> Engineering Consultation</h2>
-									<p>Expert electrical engineering consultation for design, troubleshooting, and system optimization. From circuit analysis to full system design, our engineers provide innovative solutions.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</section>
-
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>Our Technical Expertise</h2>
-							<p>R.C. Electric Laboratory combines cutting-edge technology with decades of experience to deliver unparalleled electrical engineering services. We specialize in preventing electrical hazards and eliminating unplanned power downtime.</p>
-							
-							<div class="service-grid">
-								<div class="service-card">
-									<span class="icon solid major fa-bolt electrical-icon"></span>
-									<h3>Circuit Analysis & Design</h3>
-									<p>Advanced RC circuit analysis, filter design, and electrical system modeling using state-of-the-art simulation tools and measurement equipment.</p>
-								</div>
-								<div class="service-card">
-									<span class="icon solid major fa-shield-alt electrical-icon"></span>
-									<h3>Safety Systems</h3>
-									<p>Comprehensive safety system design, ground fault protection, arc flash analysis, and electrical hazard assessment for all facility types.</p>
-								</div>
-								<div class="service-card">
-									<span class="icon solid major fa-cog electrical-icon"></span>
-									<h3>Power Quality Analysis</h3>
-									<p>Detailed power quality studies, harmonic analysis, voltage regulation, and power factor correction to optimize system efficiency.</p>
-								</div>
-								<div class="service-card">
-									<span class="icon solid major fa-desktop electrical-icon"></span>
-									<h3>Predictive Maintenance</h3>
-									<p>Proactive maintenance programs using thermal imaging, vibration analysis, and electrical testing to prevent unexpected failures.</p>
-								</div>
-								<div class="service-card">
-									<span class="icon solid major fa-tools electrical-icon"></span>
-									<h3>Troubleshooting</h3>
-									<p>Expert diagnostic services for complex electrical problems, using advanced test equipment and systematic troubleshooting methodologies.</p>
-								</div>
-								<div class="service-card">
-									<span class="icon major fa-certificate electrical-icon"></span>
-									<h3>Compliance Testing</h3>
-									<p>Comprehensive testing and certification services ensuring compliance with local and international electrical safety standards.</p>
-								</div>
-							</div>
-							
-							<ul class="actions">
-								<li><a href="generic.html" class="button">View All Services</a></li>
-							</ul>
-						</div>
-					</section>
-
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Get Professional Electrical Services</h2>
-							<p>Ready to ensure your electrical systems are safe, efficient, and reliable? Contact R.C. Electric Laboratory today for a consultation.</p>
-							<div class="split style1">
-								<section>
-									<form method="post" action="#" style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 10px;">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" required />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="email" name="email" id="email" required />
-											</div>
-											<div class="field half">
-												<label for="phone">Phone</label>
-												<input type="tel" name="phone" id="phone" />
-											</div>
-											<div class="field half">
-												<label for="service">Service Type</label>
-												<select name="service" id="service">
-													<option value="">Select Service Type</option>
-													<option value="residential">Residential Inspection</option>
-													<option value="commercial">Commercial Analysis</option>
-													<option value="industrial">Industrial Services</option>
-													<option value="emergency">Emergency Service</option>
-													<option value="consultation">Engineering Consultation</option>
-												</select>
-											</div>
-											<div class="field">
-												<label for="message">Project Details</label>
-												<textarea name="message" id="message" rows="5" placeholder="Please describe your electrical service needs..."></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Request Service Quote" class="primary" /></li>
-										</ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Laboratory Location</h3>
-											<span>R.C. Electric Laboratory<br />
-											Padre Garcia, Batangas<br />
-											Philippines</span>
-										</li>
-										<li>
-											<h3>Professional Services</h3>
-											<span>✓ Electrical Safety Testing<br />
-											✓ Power System Analysis<br />
-											✓ Engineering Consultation<br />
-											✓ Emergency Response</span>
-										</li>
-										<li>
-											<h3>Emergency Hotline</h3>
-											<span style="color: #e74c3c; font-weight: bold;">24/7 Emergency Service Available</span>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="https://www.facebook.com/RCElectricLaboratory" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-												<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; 2025 R.C. Electric Laboratory. All rights reserved.</li>
-						<li>Professional Electrical Engineering Services | Padre Garcia, Batangas</li>
-						<li>Licensed & Insured | Emergency Services Available</li>
-					</ul>
-				</div>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <script src="script.js"></script>
+</body>
 </html>
