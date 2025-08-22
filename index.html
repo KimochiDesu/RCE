@@ -3,236 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Fundamentals - CIA Triad & Non-Repudiation</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Cybersecurity E-Learning Portal</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation Controls -->
-    <div class="nav-controls">
-        <button id="prevBtn" class="nav-btn">← Previous</button>
-        <span id="slideCounter" class="slide-counter">1 / 6</span>
-        <button id="nextBtn" class="nav-btn">Next →</button>
-    </div>
-
-    <!-- Progress Bar -->
-    <div class="progress-container">
-        <div id="progressBar" class="progress-bar"></div>
-    </div>
-
-    <!-- Main Content Container -->
-    <div class="presentation-container">
-        
-        <!-- Slide 1: Introduction -->
-        <div class="slide active" id="slide1">
-            <div class="slide-content">
-                <h1>Cybersecurity Fundamentals</h1>
-                <h2>CIA Triad & Non-Repudiation</h2>
-                <div class="intro-grid">
-                    <div class="concept-card">
-                        <div class="icon">🔒</div>
-                        <h3>Confidentiality</h3>
-                        <p>Protecting information from unauthorized access</p>
-                    </div>
-                    <div class="concept-card">
-                        <div class="icon">🛡️</div>
-                        <h3>Integrity</h3>
-                        <p>Ensuring data remains accurate and unchanged</p>
-                    </div>
-                    <div class="concept-card">
-                        <div class="icon">⚡</div>
-                        <h3>Availability</h3>
-                        <p>Keeping systems and data accessible when needed</p>
-                    </div>
-                    <div class="concept-card">
-                        <div class="icon">✍️</div>
-                        <h3>Non-Repudiation</h3>
-                        <p>Preventing denial of actions or transactions</p>
-                    </div>
-                </div>
-                <p class="welcome-text">Welcome to your cybersecurity journey! These four pillars form the foundation of information security.</p>
+    <div class="container">
+        <header>
+            <h1>Cybersecurity Fundamentals</h1>
+            <p class="subtitle">Learn the CIA Triad and Non-Repudiation</p>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
             </div>
+        </header>
+
+        <main id="mainContent">
+            <!-- Content will be dynamically loaded here by script.js -->
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Loading content...</p>
+            </div>
+        </main>
+
+        <div class="navigation" id="navigation" style="display: none;">
+            <button id="prevBtn" class="nav-btn">← Previous</button>
+            <span id="currentStep" class="step-indicator">1 / 6</span>
+            <button id="nextBtn" class="nav-btn">Next →</button>
         </div>
 
-        <!-- Slide 2: Confidentiality -->
-        <div class="slide" id="slide2">
-            <div class="slide-content">
-                <h1>🔒 Confidentiality</h1>
-                <div class="definition-box">
-                    <h3>What is Confidentiality?</h3>
-                    <p>Confidentiality ensures that sensitive information is only accessible to authorized individuals. Think of it as keeping secrets safe from prying eyes.</p>
-                </div>
-                
-                <div class="examples-section">
-                    <h3>Real-World Examples:</h3>
-                    <ul class="example-list">
-                        <li><strong>Password Protection:</strong> Your login credentials should only be known by you</li>
-                        <li><strong>Medical Records:</strong> Only authorized healthcare providers can access patient information</li>
-                        <li><strong>Financial Data:</strong> Bank account details are encrypted and protected</li>
-                        <li><strong>Company Secrets:</strong> Trade secrets and confidential business information</li>
-                    </ul>
-                </div>
-
-                <div class="methods-section">
-                    <h3>How We Maintain Confidentiality:</h3>
-                    <div class="method-cards">
-                        <div class="method-card">
-                            <h4>Encryption</h4>
-                            <p>Converting data into coded format</p>
-                        </div>
-                        <div class="method-card">
-                            <h4>Access Controls</h4>
-                            <p>User permissions and authentication</p>
-                        </div>
-                        <div class="method-card">
-                            <h4>Data Classification</h4>
-                            <p>Labeling information by sensitivity level</p>
-                        </div>
+        <div class="quiz-overlay" id="quizOverlay" style="display: none;">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <h2 id="quizTitle">Quiz Time!</h2>
+                    <div class="score-display">
+                        Score: <span id="quizScore">0</span> / <span id="totalQuestions">0</span>
                     </div>
+                </div>
+                <div id="quizContent"></div>
+                <div class="quiz-actions">
+                    <button id="submitAnswer" class="quiz-btn" style="display: none;">Submit Answer</button>
+                    <button id="nextQuestion" class="quiz-btn" style="display: none;">Next Question</button>
+                    <button id="finishQuiz" class="quiz-btn" style="display: none;">Finish Quiz</button>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 3: Integrity -->
-        <div class="slide" id="slide3">
-            <div class="slide-content">
-                <h1>🛡️ Integrity</h1>
-                <div class="definition-box">
-                    <h3>What is Integrity?</h3>
-                    <p>Integrity ensures that data remains accurate, complete, and unchanged during storage or transmission. It's about maintaining the trustworthiness of information.</p>
-                </div>
-                
-                <div class="examples-section">
-                    <h3>Real-World Examples:</h3>
-                    <ul class="example-list">
-                        <li><strong>Email Authentication:</strong> Ensuring emails haven't been tampered with during delivery</li>
-                        <li><strong>Software Updates:</strong> Verifying that downloaded software hasn't been modified by malicious actors</li>
-                        <li><strong>Financial Transactions:</strong> Making sure transaction amounts aren't altered</li>
-                        <li><strong>Database Records:</strong> Preventing unauthorized changes to stored information</li>
-                    </ul>
-                </div>
-
-                <div class="methods-section">
-                    <h3>How We Maintain Integrity:</h3>
-                    <div class="method-cards">
-                        <div class="method-card">
-                            <h4>Digital Signatures</h4>
-                            <p>Cryptographic proof of authenticity</p>
-                        </div>
-                        <div class="method-card">
-                            <h4>Checksums/Hashes</h4>
-                            <p>Mathematical verification of data</p>
-                        </div>
-                        <div class="method-card">
-                            <h4>Version Control</h4>
-                            <p>Tracking changes and maintaining history</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 4: Availability -->
-        <div class="slide" id="slide4">
-            <div class="slide-content">
-                <h1>⚡ Availability</h1>
-                <div class="definition-box">
-                    <h3>What is Availability?</h3>
-                    <p>Availability ensures that systems, applications, and data are accessible and operational when authorized users need them. It's about keeping things running smoothly.</p>
-                </div>
-                
-                <div class="examples-section">
-                    <h3>Real-World Examples:</h3>
-                    <ul class="example-list">
-                        <li><strong>Website Uptime:</strong> Ensuring websites are accessible 24/7</li>
-                        <li><strong>Emergency Services:</strong> 911 systems must always be available</li>
-                        <li><strong>Banking Systems:</strong> ATMs and online banking working when customers need them</li>
-                        <li><strong>Email Services:</strong> Being able to send and receive emails reliably</li>
-                    </ul>
-                </div>
-
-                <div class="methods-section">
-                    <h3>How We Maintain Availability:</h3>
-                    <div class="method-cards">
-                        <div class="method-card">
-                            <h4>Redundancy</h4>
-                            <p>Backup systems and multiple servers</p>
-                        </div>
-                        <div class="method-card">
-                            <h4>Load Balancing</h4>
-                            <p>Distributing traffic across multiple resources</p>
-                        </div>
-                        <div class="method-card">
-                            <h4>Disaster Recovery</h4>
-                            <p>Plans to restore systems after failures</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 5: Non-Repudiation -->
-        <div class="slide" id="slide5">
-            <div class="slide-content">
-                <h1>✍️ Non-Repudiation</h1>
-                <div class="definition-box">
-                    <h3>What is Non-Repudiation?</h3>
-                    <p>Non-repudiation prevents someone from denying that they performed a specific action or sent a particular message. It provides proof of origin and delivery.</p>
-                </div>
-                
-                <div class="examples-section">
-                    <h3>Real-World Examples:</h3>
-                    <ul class="example-list">
-                        <li><strong>Digital Contracts:</strong> Electronic signatures that can't be denied later</li>
-                        <li><strong>Email Receipts:</strong> Proof that an email was sent and received</li>
-                        <li><strong>Financial Transactions:</strong> Bank records showing who authorized a payment</li>
-                        <li><strong>Legal Documents:</strong> Timestamped and digitally signed court filings</li>
-                    </ul>
-                </div>
-
-                <div class="methods-section">
-                    <h3>How We Achieve Non-Repudiation:</h3>
-                    <div class="method-cards">
-                        <div class="method-card">
-                            <h4>Digital Signatures</h4>
-                            <p>Cryptographic proof of identity</p>
-                        </div>
-                        <div class="method-card">
-                            <h4>Audit Logs</h4>
-                            <p>Detailed records of all actions</p>
-                        </div>
-                        <div class="method-card">
-                            <h4>Timestamps</h4>
-                            <p>Precise timing of events and actions</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 6: Quiz -->
-        <div class="slide" id="slide6">
-            <div class="slide-content">
-                <h1>🎯 Knowledge Check</h1>
-                <div id="quizContainer">
-                    <div id="scoreDisplay" class="score-display">
-                        <h3>Your Score: <span id="currentScore">0</span> / 3</h3>
-                    </div>
-                    
-                    <!-- Quiz Questions (will be dynamically populated) -->
-                    <div id="questionContainer" class="question-container">
-                        <!-- Questions will be inserted here by JavaScript -->
-                    </div>
-                    
-                    <!-- Quiz Results -->
-                    <div id="quizResults" class="quiz-results hidden">
-                        <h2>Quiz Complete!</h2>
-                        <div id="finalScore" class="final-score"></div>
-                        <div id="resultMessage" class="result-message"></div>
-                        <button id="retakeQuiz" class="quiz-btn">Retake Quiz</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <footer>
+            <a href="admin-login.html" class="admin-link">Admin Portal</a>
+        </footer>
     </div>
 
     <script src="script.js"></script>
