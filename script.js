@@ -496,4 +496,233 @@ function restartCourse() {
 }
 
 function showErrorMessage(message) {
-    const mainContent
+    const mainContent = document.getElementById('mainContent');
+    
+    const errorHTML = `
+        <div class="error-message">
+            <h2>⚠️ Error</h2>
+            <p>${message}</p>
+            <button class="nav-btn" onclick="location.reload()">Refresh Page</button>
+        </div>
+    `;
+    
+    mainContent.innerHTML = errorHTML;
+    console.error('Error displayed:', message);
+}
+
+// ===== UTILITY FUNCTIONS =====
+// Handle API errors gracefully
+function handleAPIError(error, context) {
+    console.error(`API Error in ${context}:`, error);
+    
+    if (error.name === 'TypeError' && error.message.includes('fetch')) {
+        showErrorMessage('Connection error. Please check your internet connection and try again.');
+    } else if (error.message.includes('404')) {
+        showErrorMessage('Content not found. Please contact the administrator.');
+    } else if (error.message.includes('500')) {
+        showErrorMessage('Server error. Please try again later.');
+    } else {
+        showErrorMessage(`An error occurred: ${error.message}`);
+    }
+}
+
+// Format content for display (sanitize HTML)
+function sanitizeHTML(html) {
+    const temp = document.createElement('div');
+    temp.textContent = html;
+    return temp.innerHTML;
+}
+
+// Add smooth scrolling behavior
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Add keyboard navigation support
+document.addEventListener('keydown', function(event) {
+    // Don't interfere with quiz interactions
+    const quizOverlay = document.getElementById('quizOverlay');
+    if (quizOverlay && quizOverlay.style.display !== 'none') {
+        return;
+    }
+    
+    switch(event.key) {
+        case 'ArrowLeft':
+            event.preventDefault();
+            if (currentStep > 0) {
+                previousContent();
+            }
+            break;
+        case 'ArrowRight':
+            event.preventDefault();
+            if (currentStep < currentContent.length - 1) {
+                nextContent();
+            }
+            break;
+        case 'Home':
+            event.preventDefault();
+            currentStep = 0;
+            displayCurrentContent();
+            break;
+        case 'End':
+            event.preventDefault();
+            currentStep = currentContent.length - 1;
+            displayCurrentContent();
+            break;
+    }
+});
+
+// ===== ANALYTICS AND TRACKING =====
+// Track user progress and interactions
+function trackUserProgress() {
+    const progressData = {
+        currentStep: currentStep,
+        totalSteps: currentContent.length,
+        completedLessons: currentContent.slice(0, currentStep + 1).filter(item => item.type === 'lesson').length,
+        completedQuizzes: currentContent.slice(0, currentStep + 1).filter(item => item.type === 'quiz').length,
+        timestamp: new Date().toISOString()
+    };
+    
+    // Store in sessionStorage for persistence during the session
+    try {
+        sessionStorage.setItem('userProgress', JSON.stringify(progressData));
+        console.log('Progress tracked:', progressData);
+    } catch (error) {
+        console.warn('Could not save progress to session storage:', error);
+    }
+}
+
+// Load saved progress on initialization
+function loadSavedProgress() {
+    try {
+        const savedProgress = sessionStorage.getItem('userProgress');
+        if (savedProgress) {
+            const progressData = JSON.parse(savedProgress);
+            // Only restore if the content structure matches
+            if (progressData.totalSteps === currentContent.length) {
+                currentStep = progressData.currentStep;
+                console.log('Restored saved progress:', progressData);
+                return true;
+            }
+        }
+    } catch (error) {
+        console.warn('Could not load saved progress:', error);
+    }
+    return false;
+}
+
+// ===== ACCESSIBILITY FEATURES =====
+// Add ARIA labels and screen reader support
+function enhanceAccessibility() {
+    // Add ARIA labels to navigation buttons
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    
+    if (prevBtn) {
+        prevBtn.setAttribute('aria-label', 'Go to previous lesson or quiz');
+    }
+    
+    if (nextBtn) {
+        nextBtn.setAttribute('aria-label', 'Go to next lesson or quiz');
+    }
+    
+    // Add role attributes to quiz elements
+    const quizContainer = document.querySelector('.quiz-container');
+    if (quizContainer) {
+        quizContainer.setAttribute('role', 'dialog');
+        quizContainer.setAttribute('aria-modal', 'true');
+    }
+}
+
+// ===== INITIALIZATION WITH ENHANCED FEATURES =====
+// Enhanced initialization that includes all features
+async function initializeApplicationEnhanced() {
+    try {
+        // Show loading state
+        showLoadingState();
+        
+        // Load content from server
+        await loadContentFromServer();
+        
+        // Setup event listeners
+        setupEventListeners();
+        
+        // Enhance accessibility
+        enhanceAccessibility();
+        
+        // Try to load saved progress
+        const progressRestored = loadSavedProgress();
+        
+        // Display appropriate content
+        displayCurrentContent();
+        
+        // Track initial progress
+        trackUserProgress();
+        
+        // Hide loading state
+        hideLoadingState();
+        
+        console.log(`Application successfully initialized${progressRestored ? ' with restored progress' : ''}`);
+    } catch (error) {
+        console.error('Failed to initialize application:', error);
+        handleAPIError(error, 'initialization');
+    }
+}
+
+function showLoadingState() {
+    const mainContent = document.getElementById('mainContent');
+    if (mainContent) {
+        mainContent.innerHTML = `
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Loading content...</p>
+            </div>
+        `;
+    }
+}
+
+function hideLoadingState() {
+    // Loading state will be replaced by displayCurrentContent()
+}
+
+// Override the original initialization
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('E-Learning Application Initialized with Enhanced Features');
+    initializeApplicationEnhanced();
+});
+
+// ===== PERFORMANCE OPTIMIZATION =====
+// Debounce function for performance optimization
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Optimized progress tracking with debouncing
+const debouncedTrackProgress = debounce(trackUserProgress, 500);
+
+// Add progress tracking to navigation functions
+const originalPreviousContent = previousContent;
+const originalNextContent = nextContent;
+
+previousContent = function() {
+    originalPreviousContent();
+    debouncedTrackProgress();
+    scrollToTop();
+};
+
+nextContent = function() {
+    originalNextContent();
+    debouncedTrackProgress();
+    scrollToTop();
+};
