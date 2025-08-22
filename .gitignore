@@ -1,3 +1,48 @@
+# ===== NODE.JS =====
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons
+build/Release
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
 # ===== ENVIRONMENT VARIABLES =====
 # Environment configuration files (CRITICAL - Contains database credentials)
 .env
@@ -5,3 +50,201 @@
 .env.development.local
 .env.test.local
 .env.production.local
+
+# ===== DATABASE =====
+# Database files (if using local SQLite for development)
+*.db
+*.sqlite
+*.sqlite3
+
+# Database dumps
+*.sql
+
+# ===== LOGS =====
+# Application logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===== OPERATING SYSTEMS =====
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ===== EDITORS & IDEs =====
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# WebStorm/IntelliJ
+.idea/
+*.swp
+*.swo
+*~
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+*.swp
+*.swo
+.vimrc
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ===== TEMPORARY FILES =====
+# Temporary folders
+tmp/
+temp/
+.tmp/
+
+# Cache directories
+.cache/
+.parcel-cache/
+
+# ===== BUILD & DISTRIBUTION =====
+# Build outputs (if you add a build process later)
+dist/
+build/
+out/
+
+# Static site generators
+.next/
+.nuxt/
+.vuepress/dist
+.serverless/
+.fusebox/
+
+# ===== TESTING =====
+# Test coverage
+coverage/
+.nyc_output/
+
+# Jest
+.jest/
+
+# ===== DEPLOYMENT =====
+# Railway deployment files (optional - you might want to keep these)
+# railway.json
+
+# Heroku
+.heroku/
+
+# Vercel
+.vercel/
+
+# Netlify
+.netlify/
+
+# ===== SECURITY & SENSITIVE DATA =====
+# SSL certificates
+*.pem
+*.key
+*.crt
+*.csr
+
+# Authentication files
+auth.json
+credentials.json
+service-account.json
+
+# Backup files
+*.backup
+*.bak
+*.old
+
+# ===== PROJECT SPECIFIC =====
+# If you add file uploads later
+uploads/
+user-uploads/
+static/uploads/
+
+# If you add generated documentation
+docs/build/
+
+# ===== PACKAGE MANAGERS =====
+# Yarn
+yarn.lock
+.yarn/
+.pnp.*
+
+# pnpm
+pnpm-lock.yaml
+.pnpm-store/
+
+# Bun
+bun.lockb
+
+# ===== MISCELLANEOUS =====
+# Runtime configuration
+.runtime
+
+# Local development overrides
+local.json
+local.js
+
+# Debug files
+debug/
+*.debug
+
+# Performance monitoring
+.clinic/
+clinic/
+
+# Optional: Keep these files if needed for your project
+# README.md
+# LICENSE
+# package.json
+# server.js
+# *.html
+# *.css
+# *.js (your actual source files)
